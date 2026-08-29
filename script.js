@@ -2,7 +2,7 @@
 const WEDDING_DATE = new Date('2026-12-18T15:00:00-08:00'); // 3:00 PM PT
 // To wire the RSVP form up to a real backend, create a free form at
 // https://formspree.io, then paste the endpoint URL below.
-const RSVP_ENDPOINT = ''; // e.g. 'https://formspree.io/f/xxxxxxx'
+const RSVP_ENDPOINT = 'https://formspree.io/f/mbgjlpdg'; // e.g. 'https://formspree.io/f/xxxxxxx'
 
 // ---------- Mobile nav ----------
 const navToggle = document.getElementById('navToggle');
