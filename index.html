@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Ashley & Paul — December 18, 2026</title>
+<meta name="description" content="Join us in celebrating the wedding of Ashley Jinyoung Ko and Paul Youngrae Kim, December 18, 2026 at Rancho Las Lomas, Silverado, California.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,400;1,500&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<div class="bloom-defs" aria-hidden="true">
+  <svg width="0" height="0">
+    <defs>
+      <filter id="bloomBlur" x="-50%" y="-50%" width="200%" height="200%">
+        <feGaussianBlur stdDeviation="55" />
+      </filter>
+      <filter id="bloomBlurSoft" x="-50%" y="-50%" width="200%" height="200%">
+        <feGaussianBlur stdDeviation="30" />
+      </filter>
+    </defs>
+  </svg>
+</div>
+
+<header class="nav-wrap">
+  <nav class="nav" aria-label="Section navigation">
+    <button class="nav-toggle" id="navToggle" aria-expanded="false" aria-controls="navList">
+      <span></span><span></span><span></span>
+    </button>
+    <ul class="nav-list" id="navList">
+      <li><a href="#welcome" class="nav-link active">Welcome</a></li>
+      <li><a href="#rsvp" class="nav-link">RSVP</a></li>
+      <li><a href="#schedule" class="nav-link">Schedule</a></li>
+      <li><a href="#registry" class="nav-link">Registry</a></li>
+      <li><a href="#qa" class="nav-link">Q&amp;A</a></li>
+      <li><a href="#moments" class="nav-link">Moments</a></li>
+    </ul>
+  </nav>
+</header>
+
+<main>
+
+  <!-- WELCOME -->
+  <section id="welcome" class="section hero">
+    <div class="bloom bloom-hero" aria-hidden="true">
+      <svg viewBox="0 0 800 800" xmlns="http://www.w3.org/2000/svg">
+        <circle cx="330" cy="300" r="180" fill="var(--rouge)" opacity="0.35" filter="url(#bloomBlur)"/>
+        <circle cx="480" cy="420" r="150" fill="var(--ink)" opacity="0.22" filter="url(#bloomBlur)"/>
+        <circle cx="380" cy="480" r="110" fill="var(--rouge-soft)" opacity="0.3" filter="url(#bloomBlurSoft)"/>
+      </svg>
+    </div>
+    <p class="eyebrow reveal">Together with their families</p>
+    <h1 class="hero-names reveal">Ashley <span class="amp">&amp;</span> Paul</h1>
+    <p class="hero-date reveal">December 18, 2026 &nbsp;·&nbsp; Silverado, California</p>
+    <a href="#rsvp" class="scroll-cue reveal" aria-label="Scroll to RSVP">
+      <span class="scroll-line"></span>
+    </a>
+  </section>
+
+  <!-- RSVP -->
+  <section id="rsvp" class="section">
+    <p class="eyebrow reveal">RSVP</p>
+    <h2 class="section-title reveal">Friday, December 18, 2026</h2>
+    <p class="section-sub reveal">Rancho Las Lomas &nbsp;·&nbsp; Silverado, California</p>
+
+    <div class="countdown reveal" id="countdown" aria-live="polite">
+      <div class="countdown-unit"><span id="cd-days">–</span><small>days</small></div>
+      <div class="countdown-unit"><span id="cd-hours">–</span><small>hrs</small></div>
+      <div class="countdown-unit"><span id="cd-mins">–</span><small>min</small></div>
+      <div class="countdown-unit"><span id="cd-secs">–</span><small>sec</small></div>
+    </div>
+
+    <form class="rsvp-form reveal" id="rsvpForm">
+      <div class="form-row">
+        <label for="fullName">Full name</label>
+        <input type="text" id="fullName" name="fullName" required autocomplete="name">
+      </div>
+      <div class="form-row">
+        <label for="attending">Will you be attending?</label>
+        <select id="attending" name="attending" required>
+          <option value="" disabled selected>Select one</option>
+          <option value="yes">Joyfully accepts</option>
+          <option value="no">Regretfully declines</option>
+        </select>
+      </div>
+      <div class="form-row">
+        <label for="guests">Number attending in your party</label>
+        <input type="number" id="guests" name="guests" min="1" max="4" value="1">
+      </div>
+      <div class="form-row">
+        <label for="note">A note for the couple (optional)</label>
+        <textarea id="note" name="note" rows="3"></textarea>
+      </div>
+      <button type="submit" class="btn">Send RSVP</button>
+      <p class="form-note">Please respond by April 30, 2026.</p>
+    </form>
+  </section>
+
+  <!-- SCHEDULE -->
+  <section id="schedule" class="section">
+    <p class="eyebrow reveal">Schedule</p>
+    <h2 class="section-title reveal">The Day</h2>
+
+    <div class="schedule-card reveal">
+      <div class="schedule-info">
+        <p class="schedule-time">3:00 PM – 11:00 PM</p>
+        <p class="schedule-event">Ceremony &amp; Reception</p>
+        <ul class="schedule-meta">
+          <li>Cocktail attire</li>
+          <li>Rancho Las Lomas, 19191 Lawrence Canyon, Silverado, CA 92676</li>
+        </ul>
+        <div class="schedule-links">
+          <a href="#" id="addToCalendar">Add to calendar →</a>
+          <a href="#registry" onclick="return false" class="disabled-link">Where to stay →</a>
+          <a href="https://www.google.com/maps/search/?api=1&query=Rancho+Las+Lomas+19191+Lawrence+Canyon+Silverado+CA+92676" target="_blank" rel="noopener">Directions →</a>
+        </div>
+      </div>
+      <div class="schedule-map">
+        <iframe
+          title="Map to Rancho Las Lomas"
+          src="https://www.google.com/maps?q=Rancho+Las+Lomas,+19191+Lawrence+Canyon,+Silverado,+CA+92676&output=embed"
+          loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade">
+        </iframe>
+      </div>
+    </div>
+  </section>
+
+  <!-- REGISTRY -->
+  <section id="registry" class="section registry">
+    <div class="bloom bloom-side" aria-hidden="true">
+      <svg viewBox="0 0 600 600" xmlns="http://www.w3.org/2000/svg">
+        <circle cx="300" cy="300" r="200" fill="var(--rouge)" opacity="0.18" filter="url(#bloomBlur)"/>
+      </svg>
+    </div>
+    <p class="eyebrow reveal">Registry</p>
+    <h2 class="section-title reveal">A Gift</h2>
+    <p class="section-body reveal">Your presence is enough of a present to us. But for those who insist, we've put together a small wish list to help you out.</p>
+    <a href="#" class="btn btn-outline reveal">View registry</a>
+  </section>
+
+  <!-- Q&A -->
+  <section id="qa" class="section">
+    <p class="eyebrow reveal">Good to Know</p>
+    <h2 class="section-title reveal">Q&amp;A</h2>
+
+    <div class="accordion reveal" id="accordion">
+
+      <div class="accordion-item">
+        <button class="accordion-trigger">What's the RSVP deadline?<span class="accordion-icon"></span></button>
+        <div class="accordion-panel"><p>Please RSVP by April 30, 2026 so we can get an accurate headcount.</p></div>
+      </div>
+
+      <div class="accordion-item">
+        <button class="accordion-trigger">Can I bring a date?<span class="accordion-icon"></span></button>
+        <div class="accordion-panel"><p>We would love to celebrate with everyone, but due to venue capacity we're only able to invite those named on the invitation. Thank you for understanding.</p></div>
+      </div>
+
+      <div class="accordion-item">
+        <button class="accordion-trigger">Are kids welcome?<span class="accordion-icon"></span></button>
+        <div class="accordion-panel"><p>While we love your little ones, our wedding will be an adults-only celebration. Thank you for understanding.</p></div>
+      </div>
+
+      <div class="accordion-item">
+        <button class="accordion-trigger">Where can I park?<span class="accordion-icon"></span></button>
+        <div class="accordion-panel"><p>Valet service will be provided for everyone's convenience at the venue.</p></div>
+      </div>
+
+      <div class="accordion-item">
+        <button class="accordion-trigger">What is the dress code?<span class="accordion-icon"></span></button>
+        <div class="accordion-panel"><p><strong>Semi-formal / cocktail attire.</strong> Think suits, dress shirts, cocktail dresses, and midi or floor-length dresses — in earthy warm tones: sand, terracotta, forest green, and bronze.</p></div>
+      </div>
+
+      <div class="accordion-item">
+        <button class="accordion-trigger">What shoes should I wear (or avoid)?<span class="accordion-icon"></span></button>
+        <div class="accordion-panel"><p>Please skip the stilettos — there are grassy, dirt, and rocky areas. Block heels or sandals are a safer bet.</p></div>
+      </div>
+
+      <div class="accordion-item">
+        <button class="accordion-trigger">What will the weather be like?<span class="accordion-icon"></span></button>
+        <div class="accordion-panel"><p>Our December wedding will likely bring mild daytime temperatures and cooler evenings. We suggest dressing in layers and preparing for possible light rain.</p></div>
+      </div>
+
+      <div class="accordion-item">
+        <button class="accordion-trigger">Is the wedding indoors or outdoors?<span class="accordion-icon"></span></button>
+        <div class="accordion-panel"><p>Ceremony and reception will both be held outdoors.</p></div>
+      </div>
+
+      <div class="accordion-item">
+        <button class="accordion-trigger">Can we take photos during the wedding?<span class="accordion-icon"></span></button>
+        <div class="accordion-panel"><p>Yes — we'd love for you to take photos and share them on our Joy app. Please refrain from taking photos during the ceremony itself.</p></div>
+      </div>
+
+      <div class="accordion-item">
+        <button class="accordion-trigger">Who should I contact with questions?<span class="accordion-icon"></span></button>
+        <div class="accordion-panel"><p>Details coming soon.</p></div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- MOMENTS -->
+  <section id="moments" class="section moments">
+    <p class="eyebrow reveal">Moments</p>
+    <h2 class="section-title reveal">Together</h2>
+    <p class="section-body reveal">A few from along the way — more to come after the day itself.</p>
+    <div class="gallery reveal" id="gallery">
+      <div class="gallery-item placeholder"></div>
+      <div class="gallery-item placeholder"></div>
+      <div class="gallery-item placeholder"></div>
+      <div class="gallery-item placeholder"></div>
+      <div class="gallery-item placeholder"></div>
+      <div class="gallery-item placeholder"></div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="footer">
+  <p class="footer-names">Ashley &amp; Paul</p>
+  <p class="footer-date">12 · 18 · 2026</p>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
