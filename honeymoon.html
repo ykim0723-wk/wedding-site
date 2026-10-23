@@ -122,7 +122,16 @@
     user-select: all;
   }
   .hm-copy { min-width: 190px; }
-  .hm-copy.copied { background: var(--rouge); border-color: var(--rouge); }
+  .hm-or {
+    font-family: var(--font-display);
+    font-style: italic;
+    font-size: 1.3rem;
+    color: var(--muted);
+    margin: 1.75rem 0;
+  }
+  .hm-actions { display: flex; flex-wrap: wrap; justify-content: center; gap: 0.75rem; }
+  .hm-actions .btn { margin-top: 0; min-width: 170px; }
+  .hm-copy.copied { background: var(--rouge); border-color: var(--rouge); color: var(--bg); }
 
   .hm-steps {
     list-style: none;
@@ -195,8 +204,8 @@
       </figure>
       <p class="hm-to">or send directly to</p>
       <p class="hm-recipient">Ashley Ko</p>
-      <span class="hm-email" id="zelleEmail">ashleyjinyoungko@gmail.com</span>
-      <button class="btn hm-copy" id="copyBtn" type="button">Copy email</button>
+      <span class="hm-email">ashleyjinyoungko@gmail.com</span>
+      <button class="btn hm-copy" type="button" data-copy="ashleyjinyoungko@gmail.com">Copy email</button>
 
       <ol class="hm-steps">
         <li>Scan the code above, or open your banking app and choose Zelle.</li>
@@ -205,25 +214,43 @@
       </ol>
     </div>
 
+    <p class="hm-or">or</p>
+
+    <div class="hm-card">
+      <p class="hm-card-label">Send a gift with</p>
+      <p class="hm-zelle">PayPal</p>
+      <figure class="hm-qr">
+        <img src="images/paypal-qr.png" alt="PayPal QR code for ko.ashleyj@gmail.com" width="240" height="240">
+        <figcaption>Scan with your phone camera</figcaption>
+      </figure>
+      <p class="hm-to">or send directly to</p>
+      <span class="hm-email">ko.ashleyj@gmail.com</span>
+      <div class="hm-actions">
+        <a class="btn" href="https://www.paypal.com/cgi-bin/webscr?cmd=_xclick&amp;business=ko.ashleyj%40gmail.com&amp;item_name=Ashley+%26+Paul+Honeymoon+Fund&amp;currency_code=USD&amp;no_shipping=1" target="_blank" rel="noopener">Open PayPal</a>
+        <button class="btn btn-outline hm-copy" type="button" data-copy="ko.ashleyj@gmail.com">Copy email</button>
+      </div>
+    </div>
+
     <p class="hm-thanks">With love and gratitude</p>
   </div>
 </main>
 
 <script>
-  const btn = document.getElementById('copyBtn');
-  const email = document.getElementById('zelleEmail').textContent.trim();
-  btn.addEventListener('click', async () => {
-    try {
-      await navigator.clipboard.writeText(email);
-    } catch (e) {
-      const r = document.createRange();
-      r.selectNodeContents(document.getElementById('zelleEmail'));
-      const s = getSelection(); s.removeAllRanges(); s.addRange(r);
-      try { document.execCommand('copy'); } catch (_) {}
-    }
-    btn.textContent = 'Copied';
-    btn.classList.add('copied');
-    setTimeout(() => { btn.textContent = 'Copy email'; btn.classList.remove('copied'); }, 2000);
+  document.querySelectorAll('[data-copy]').forEach(btn => {
+    const label = btn.textContent;
+    btn.addEventListener('click', async () => {
+      const text = btn.dataset.copy;
+      try { await navigator.clipboard.writeText(text); }
+      catch (e) {
+        const t = document.createElement('textarea');
+        t.value = text; document.body.appendChild(t); t.select();
+        try { document.execCommand('copy'); } catch (_) {}
+        t.remove();
+      }
+      btn.textContent = 'Copied';
+      btn.classList.add('copied');
+      setTimeout(() => { btn.textContent = label; btn.classList.remove('copied'); }, 2000);
+    });
   });
 </script>
 </body>
