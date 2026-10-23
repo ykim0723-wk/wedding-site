@@ -503,23 +503,6 @@ a {
   line-height: 1.75;
 }
 
-/* ---------- MOMENTS ---------- */
-
-.moments { max-width: 900px; }
-.gallery {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 0.6rem;
-}
-.gallery-item {
-  aspect-ratio: 4 / 5;
-  background: var(--bg-alt);
-  border: 1px solid var(--hairline);
-}
-@media (max-width: 640px) {
-  .gallery { grid-template-columns: repeat(2, 1fr); }
-}
-
 /* ---------- FOOTER ---------- */
 
 .footer {

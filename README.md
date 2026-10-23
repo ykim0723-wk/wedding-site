@@ -15,7 +15,6 @@ A minimal static site: `index.html`, `styles.css`, `script.js`. No build step, n
    - Go to [formspree.io](https://formspree.io), create a free form, and copy the endpoint URL.
    - Open `script.js`, find `const RSVP_ENDPOINT = '';` near the top, and paste your endpoint URL between the quotes.
    - Formspree's free tier emails you each submission and gives you a dashboard of responses.
-2. **Add real photos.** In `index.html`, find the `Moments` section (search for `gallery-item placeholder`) and swap those divs for `<img>` tags pointing at your photos. Drop the image files in a new `/images` folder next to `index.html`.
 3. **Add a registry link.** In `index.html`, find the `Registry` section and set the `href` on the "View registry" button to your registry URL.
 
 ## Notes
