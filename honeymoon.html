@@ -84,7 +84,31 @@
     letter-spacing: 0.02em;
     margin: 0 0 0.35rem;
   }
-  .hm-to { font-size: 0.85rem; color: var(--muted); margin: 0 0 0.9rem; }
+  .hm-qr { margin: 1.5rem auto 1.75rem; }
+  .hm-qr img {
+    display: block;
+    width: 220px;
+    height: 220px;
+    margin: 0 auto 0.9rem;
+    padding: 10px;
+    background: #fff;
+    border: 1px solid var(--hairline);
+    border-radius: 14px;
+    image-rendering: pixelated;
+  }
+  .hm-qr figcaption { font-size: 0.8rem; color: var(--muted); }
+  .hm-to {
+    font-size: 0.7rem;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--muted);
+    margin: 0 0 0.5rem;
+  }
+  .hm-recipient {
+    font-family: var(--font-display);
+    font-size: 1.35rem;
+    margin: 0 0 0.75rem;
+  }
   .hm-email {
     display: block;
     font-size: clamp(1rem, 4.4vw, 1.2rem);
@@ -165,13 +189,18 @@
     <div class="hm-card">
       <p class="hm-card-label">Send a gift with</p>
       <p class="hm-zelle">Zelle</p>
-      <p class="hm-to">to</p>
+      <figure class="hm-qr">
+        <img src="images/zelle-qr.png" alt="Zelle QR code for Ashley Ko" width="240" height="240">
+        <figcaption>Scan with your phone camera or banking app</figcaption>
+      </figure>
+      <p class="hm-to">or send directly to</p>
+      <p class="hm-recipient">Ashley Ko</p>
       <span class="hm-email" id="zelleEmail">ashleyjinyoungko@gmail.com</span>
       <button class="btn hm-copy" id="copyBtn" type="button">Copy email</button>
 
       <ol class="hm-steps">
-        <li>Open your banking app and choose Zelle.</li>
-        <li>Send to the email above.</li>
+        <li>Scan the code above, or open your banking app and choose Zelle.</li>
+        <li>Send to Ashley Ko at the email above.</li>
         <li>Add your name in the memo so we know who to thank.</li>
       </ol>
     </div>
