@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Honeymoon Fund · Ashley &amp; Paul</title>
+<meta name="description" content="Contribute to Ashley and Paul's honeymoon fund.">
+<meta name="robots" content="noindex">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,400;1,500&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+<style>
+  .hm-page {
+    position: relative;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 5rem 1.5rem 4rem;
+    text-align: center;
+    overflow: hidden;
+  }
+  .hm-back {
+    position: absolute;
+    top: 1.75rem;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 0.72rem;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    white-space: nowrap;
+    color: var(--muted);
+    border-bottom: 1px solid transparent;
+    transition: color 0.2s ease, border-color 0.2s ease;
+  }
+  .hm-back:hover { color: var(--ink); border-bottom-color: var(--rouge); }
+
+  .hm-inner { position: relative; z-index: 1; max-width: 520px; width: 100%; }
+
+  .hm-names {
+    font-family: var(--font-display);
+    font-style: italic;
+    font-size: 1.15rem;
+    color: var(--muted);
+    margin: 0 0 2.5rem;
+  }
+  .hm-names .amp { color: var(--rouge); }
+
+  .hm-title {
+    font-family: var(--font-display);
+    font-weight: 400;
+    font-size: clamp(2.4rem, 7vw, 3.4rem);
+    line-height: 1.1;
+    margin: 0 0 1.25rem;
+  }
+  .hm-body {
+    color: var(--muted);
+    font-size: 1.02rem;
+    line-height: 1.75;
+    margin: 0 auto 3rem;
+    max-width: 440px;
+  }
+
+  .hm-card {
+    background: #fff;
+    border: 1px solid var(--hairline);
+    border-radius: 18px;
+    padding: 2.5rem 1.75rem 2.25rem;
+    box-shadow: 0 1px 0 var(--hairline), 0 24px 60px -30px rgba(33, 28, 26, 0.25);
+  }
+  .hm-card-label {
+    font-size: 0.7rem;
+    letter-spacing: 0.22em;
+    text-transform: uppercase;
+    color: var(--rouge);
+    margin: 0 0 1.25rem;
+  }
+  .hm-zelle {
+    font-family: var(--font-display);
+    font-size: 2rem;
+    font-weight: 500;
+    letter-spacing: 0.02em;
+    margin: 0 0 0.35rem;
+  }
+  .hm-to { font-size: 0.85rem; color: var(--muted); margin: 0 0 0.9rem; }
+  .hm-email {
+    display: block;
+    font-size: clamp(1rem, 4.4vw, 1.2rem);
+    font-weight: 500;
+    color: var(--ink);
+    word-break: break-all;
+    padding: 0.9rem 1rem;
+    background: var(--bg-alt);
+    border-radius: 10px;
+    margin: 0 0 1.25rem;
+    user-select: all;
+  }
+  .hm-copy { min-width: 190px; }
+  .hm-copy.copied { background: var(--rouge); border-color: var(--rouge); }
+
+  .hm-steps {
+    list-style: none;
+    counter-reset: step;
+    text-align: left;
+    padding: 1.75rem 0 0;
+    margin: 2rem 0 0;
+    border-top: 1px solid var(--hairline);
+    color: var(--muted);
+    font-size: 0.92rem;
+    line-height: 1.6;
+  }
+  .hm-steps li {
+    counter-increment: step;
+    display: grid;
+    grid-template-columns: 1.75rem 1fr;
+    margin-bottom: 0.7rem;
+  }
+  .hm-steps li::before {
+    content: counter(step);
+    font-family: var(--font-display);
+    font-size: 1.15rem;
+    color: var(--rouge);
+    line-height: 1.35;
+  }
+  .hm-steps li:last-child { margin-bottom: 0; }
+
+  .hm-thanks {
+    font-family: var(--font-display);
+    font-style: italic;
+    font-size: 1.35rem;
+    margin: 3rem 0 0;
+  }
+</style>
+</head>
+<body>
+
+<div class="bloom-defs" aria-hidden="true">
+  <svg width="0" height="0">
+    <defs>
+      <filter id="bloomBlur" x="-50%" y="-50%" width="200%" height="200%">
+        <feGaussianBlur stdDeviation="55" />
+      </filter>
+    </defs>
+  </svg>
+</div>
+
+<main class="hm-page">
+  <div class="bloom bloom-hero" aria-hidden="true">
+    <svg viewBox="0 0 800 800" xmlns="http://www.w3.org/2000/svg">
+      <circle cx="330" cy="300" r="180" fill="var(--rouge)" opacity="0.22" filter="url(#bloomBlur)"/>
+      <circle cx="480" cy="460" r="150" fill="var(--rouge-soft)" opacity="0.2" filter="url(#bloomBlur)"/>
+    </svg>
+  </div>
+
+  <a href="index.html#honeymoon" class="hm-back">&larr; Back to the wedding</a>
+
+  <div class="hm-inner">
+    <p class="hm-names">Ashley <span class="amp">&amp;</span> Paul</p>
+    <p class="eyebrow">Honeymoon Fund</p>
+    <h1 class="hm-title">Thank you</h1>
+    <p class="hm-body">Celebrating with you is truly the best gift. For those who'd like to give something more, any contribution toward our honeymoon is deeply appreciated and will help us make memories we'll carry for a lifetime.</p>
+
+    <div class="hm-card">
+      <p class="hm-card-label">Send a gift with</p>
+      <p class="hm-zelle">Zelle</p>
+      <p class="hm-to">to</p>
+      <span class="hm-email" id="zelleEmail">ashleyjinyoungko@gmail.com</span>
+      <button class="btn hm-copy" id="copyBtn" type="button">Copy email</button>
+
+      <ol class="hm-steps">
+        <li>Open your banking app and choose Zelle.</li>
+        <li>Send to the email above.</li>
+        <li>Add your name in the memo so we know who to thank.</li>
+      </ol>
+    </div>
+
+    <p class="hm-thanks">With love and gratitude</p>
+  </div>
+</main>
+
+<script>
+  const btn = document.getElementById('copyBtn');
+  const email = document.getElementById('zelleEmail').textContent.trim();
+  btn.addEventListener('click', async () => {
+    try {
+      await navigator.clipboard.writeText(email);
+    } catch (e) {
+      const r = document.createRange();
+      r.selectNodeContents(document.getElementById('zelleEmail'));
+      const s = getSelection(); s.removeAllRanges(); s.addRange(r);
+      try { document.execCommand('copy'); } catch (_) {}
+    }
+    btn.textContent = 'Copied';
+    btn.classList.add('copied');
+    setTimeout(() => { btn.textContent = 'Copy email'; btn.classList.remove('copied'); }, 2000);
+  });
+</script>
+</body>
+</html>
