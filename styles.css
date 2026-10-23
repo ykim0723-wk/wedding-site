@@ -390,6 +390,63 @@ a {
   filter: grayscale(0.35) contrast(1.05);
 }
 
+/* ---------- DRESS CODE ---------- */
+.dress-code { max-width: 1040px; }
+.dress-code .section-body { max-width: 540px; }
+
+.palette {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 1.75rem;
+  padding: 0;
+  margin: 0 0 3.5rem;
+  font-size: 0.72rem;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--muted);
+}
+.palette li { display: flex; flex-direction: column; align-items: center; gap: 0.6rem; }
+.swatch {
+  width: 46px; height: 46px;
+  border-radius: 50%;
+  box-shadow: 0 0 0 1px var(--hairline), 0 0 0 5px var(--bg), 0 0 0 6px var(--hairline);
+}
+
+.looks-label {
+  font-family: var(--font-display);
+  font-style: italic;
+  font-size: 1.25rem;
+  color: var(--ink);
+  margin: 0 0 1.5rem;
+}
+
+.looks {
+  columns: 3 220px;
+  column-gap: 14px;
+  text-align: left;
+}
+.look {
+  margin: 0 0 14px;
+  break-inside: avoid;
+  overflow: hidden;
+  background: var(--hairline);
+}
+.look img {
+  display: block;
+  width: 100%;
+  height: auto;
+  transition: transform 0.6s ease;
+}
+.look:hover img { transform: scale(1.03); }
+
+@media (max-width: 560px) {
+  .looks { columns: 2; column-gap: 10px; }
+  .look { margin-bottom: 10px; }
+  .palette { gap: 1.25rem; }
+}
+
 /* ---------- REGISTRY ---------- */
 .registry { max-width: 640px; }
 
@@ -494,3 +551,6 @@ a {
   opacity: 1;
   transform: translateY(0);
 }
+
+.schedule-meta a { color: var(--ink); text-decoration: none; border-bottom: 1px solid var(--hairline); }
+.schedule-meta a:hover { border-bottom-color: var(--rouge); }
