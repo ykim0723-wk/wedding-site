@@ -537,3 +537,6 @@ a {
 
 .schedule-meta a { color: var(--ink); text-decoration: none; border-bottom: 1px solid var(--hairline); }
 .schedule-meta a:hover { border-bottom-color: var(--rouge); }
+
+.accordion-panel a { color: var(--ink); border-bottom: 1px solid var(--rouge-soft); }
+.accordion-panel a:hover { color: var(--rouge); }
