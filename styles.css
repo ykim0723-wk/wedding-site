@@ -329,10 +329,7 @@ a {
   font-size: 0.8rem;
   color: var(--muted);
   margin-top: 0.4rem;
-  line-height: 1.7;
 }
-.form-note a { color: var(--ink); border-bottom: 1px solid var(--rouge-soft); }
-.form-note a:hover { color: var(--rouge); }
 
 /* ---------- SCHEDULE ---------- */
 
